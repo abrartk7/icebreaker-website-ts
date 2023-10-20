@@ -1,4 +1,3 @@
-// next
 import Head from 'next/head';
 import React from 'react';
 import DashboardLayout from 'src/layouts/dashboard/DashboardLayout';

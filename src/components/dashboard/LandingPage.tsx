@@ -101,7 +101,7 @@ export default function LandingPage() {
           <img
             style={{ maxWidth: '100%' }}
             alt="landingImage"
-            src="https://img.freepik.com/free-vector/flat-illustration-people-looking-up_23-2148981317.jpg?w=740&t=st=1697198747~exp=1697199347~hmac=c9e43b161b00b048dba2df8bcc6a9d79fa1dc282daa8ee8e5ffd73e81b937365"
+            src="../assets/images/landingPng4.png"
           />
         </Grid>
       </Grid>
