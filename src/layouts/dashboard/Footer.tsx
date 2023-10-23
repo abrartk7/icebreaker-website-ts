@@ -18,7 +18,7 @@ export default function Footer() {
         <Logo sx={{ mb: 1, mx: 'auto' }} />
 
         <Typography variant="caption" component="div">
-          © All rights reserved 2023
+          © 2023 All rights reserved
           <br /> made with&nbsp;❤
         </Typography>
       </Container>

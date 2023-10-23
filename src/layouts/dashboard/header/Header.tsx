@@ -35,10 +35,10 @@ export default function Header({ onOpenNav }: Props) {
     <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
       <Logo />
       <Box display="flex">
-        <Button variant="text" sx={{ color: 'text.primary', mr: 2 }}>
+        <Button variant="text" sx={{ color: 'text.main', mr: 2 }}>
           HOME
         </Button>
-        <Button variant="text" sx={{ color: 'text.primary', mr: 2 }}>
+        <Button variant="text" sx={{ color: 'text.main', mr: 2 }}>
           ABOUT
         </Button>
       </Box>

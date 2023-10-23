@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Stack, Container, Typography, Button } from '@mui/material';
+import { Grid, Container, Typography } from '@mui/material';
 
 // ----------------------------------------------------------------------
 
@@ -9,9 +9,9 @@ export default function LandingPage() {
       <Grid container justifyContent="center" alignItems="center" mb={6}>
         <Grid
           item
-          xl={4}
-          lg={4}
-          md={4}
+          xl={5}
+          lg={5}
+          md={5}
           xs={12}
           sx={{
             textAlign: { xs: 'center', md: 'left' },
@@ -31,7 +31,7 @@ export default function LandingPage() {
               color: 'primary.main',
             }}
           >
-            SpeakEZ
+            Ice Breaker
           </Typography>
 
           <Typography
@@ -43,55 +43,17 @@ export default function LandingPage() {
               margin: '10px 0 30px',
             }}
           >
-            <span style={{ color: 'black', fontWeight: 600 }}>Join our </span>
+            <span style={{ color: 'text.primary', fontWeight: 800 }}>Join our </span>
             Ice Breaker community and break the ice with those peoples who are just a stone&apos;s
             away and share your enthusiasm with similar favorite topics!
           </Typography>
-
-          <Stack
-            sx={{
-              display: 'flex',
-              justifyContent: {
-                xl: 'flex-start',
-                lg: 'flex-start',
-                md: 'flex-start',
-                sm: 'center',
-                xs: 'center',
-              },
-              flexDirection: { sm: 'row', xs: 'row' },
-            }}
-          >
-            <Button
-              variant="contained"
-              sx={{
-                fontSize: '16px',
-                textTransform: 'uppercase',
-                width: '130px',
-                height: '50px',
-                mr: 2,
-              }}
-            >
-              Register
-            </Button>
-            <Button
-              variant="outlined"
-              sx={{
-                fontSize: '16px',
-                textTransform: 'uppercase',
-                width: '130px',
-                height: '50px',
-              }}
-            >
-              Login
-            </Button>
-          </Stack>
         </Grid>
 
         <Grid
           item
-          xl={8}
-          lg={8}
-          md={8}
+          xl={7}
+          lg={7}
+          md={7}
           xs={12}
           sx={{
             display: { xs: 'none', md: 'block', lg: 'block' },

@@ -60,7 +60,14 @@ export default function AboutPage() {
           xs={12}
           sx={{ my: { lg: 4, sm: 0 }, p: 4, pb: { xs: 10 } }}
         >
-          <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: { xs: 'left', sm: 'center', lg: 'center', xl: 'center' },
+              flexDirection: { xs: 'column', lg: 'row', md: 'row', sm: 'row' },
+            }}
+          >
             <Box>
               <Typography variant="h3" sx={{ color: 'primary.main' }}>
                 Alice john
@@ -101,15 +108,22 @@ export default function AboutPage() {
           backgroundColor: 'black',
           clipPath: {
             xl: 'polygon(0 0, calc(1% - 80px) 0, 180% 95px, 117% 100%, 0 92%)',
-            lg: 'polygon(0 0, calc(1% - 80px) 0, 180% 103px, 117% 101%, 0 92%)',
+            lg: 'polygon(0 0, calc(1% - 80px) 0, 180% 103px, 117% 101%, 0 84%)',
             md: 'polygon(0 0, calc(-49% - 31px) 0, 148% 95px, 106% 100%, 0 87%)',
             sm: 'polygon(0 0, calc(2% - 31px) 0, 201% 82px, 100% 100%, 0 94%)',
-            xs: 'polygon(0 0, calc(2% - 119px) 0, 201% 82px, 100% 98%, 0 94%)',
+            xs: 'polygon(0 0, calc(2% - 119px) 0, 201% 82px, 100% 98%, 0 95%)',
           },
         }}
       >
-        <Grid item xl={8} lg={8} md={8} sm={12} xs={12} sx={{ my: 4, p: 4 }}>
-          <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <Grid item xl={8} lg={8} md={8} sm={12} xs={12} sx={{ my: 4, pt: 2, px: 4 }}>
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: { xs: 'left', sm: 'center', lg: 'center', xl: 'center' },
+              flexDirection: { xs: 'column', lg: 'row', md: 'row', sm: 'row' },
+            }}
+          >
             <Box>
               <Typography variant="h3" sx={{ color: 'primary.main' }}>
                 Lucas Bladua
@@ -152,12 +166,10 @@ export default function AboutPage() {
           sm={12}
           xs={12}
           sx={{
-            my: { lg: 0, sm: 0, xs: 0 },
-            mb: { lg: 0 },
-            px: { lg: 4, sm: 4, xs: 0 },
-            pb: { xs: 0 },
-            py: { lg: 0, sm: 0, xs: 0 },
-            pt: { xl: 10, lg: 10, md: 9 },
+            mt: { lg: 7, sm: 0 },
+            mb: { lg: 0, sm: 0 },
+            px: { lg: 4, sm: 4, xs: 2 },
+            pt: { xl: 6, lg: 5, md: 10, sm: 0, xs: 0 },
             display: 'flex',
             justifyContent: { sm: 'center', xs: 'center' },
           }}
