@@ -1,4 +1,4 @@
-import { Box, Link, Container, Typography } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import Logo from '../../components/logo';
 
 // ----------------------------------------------------------------------
@@ -18,9 +18,8 @@ export default function Footer() {
         <Logo sx={{ mb: 1, mx: 'auto' }} />
 
         <Typography variant="caption" component="div">
-          © All rights reserved
-          <br /> made by &nbsp;
-          <Link href="https://minimals.cc/"> minimals.cc </Link>
+          © All rights reserved 2023
+          <br /> made with&nbsp;❤
         </Typography>
       </Container>
     </Box>

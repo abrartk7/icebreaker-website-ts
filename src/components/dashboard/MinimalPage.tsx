@@ -2,7 +2,7 @@
 import { Box } from '@mui/material';
 import Head from 'next/head';
 import React from 'react';
-import HomePage from 'src/components/dashboard/HomePage';
+import HomePage from 'src/components/dashboard/MinimalHomePage';
 import MinimalAbout from 'src/components/dashboard/MinimalAbout';
 import DashboardLayout from 'src/layouts/dashboard/DashboardLayout';
 import { m, useScroll, useSpring } from 'framer-motion';

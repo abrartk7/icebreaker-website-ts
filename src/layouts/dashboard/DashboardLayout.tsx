@@ -1,7 +1,6 @@
 // @mui
 import { Box } from '@mui/material';
 // auth
-import AuthGuard from '../../auth/AuthGuard';
 // components
 import Main from './Main';
 import Header from './header';
@@ -14,7 +13,7 @@ type Props = {
 };
 
 export default function DashboardLayout({ children }: Props) {
-  const renderContent = () => (
+  return (
     <>
       <Header />
 
@@ -30,6 +29,4 @@ export default function DashboardLayout({ children }: Props) {
       <Footer />
     </>
   );
-
-  return <AuthGuard> {renderContent()} </AuthGuard>;
 }

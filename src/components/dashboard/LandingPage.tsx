@@ -31,7 +31,7 @@ export default function LandingPage() {
               color: 'primary.main',
             }}
           >
-            Ice Breaker
+            SpeakEZ
           </Typography>
 
           <Typography

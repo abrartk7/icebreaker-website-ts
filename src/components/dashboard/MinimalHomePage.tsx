@@ -82,7 +82,7 @@ const StyledEllipseBottom = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-export default function HomePage() {
+export default function MinimalHomePage() {
   const isDesktop = useResponsive('up', 'md');
 
   const { scrollYProgress } = useScroll();

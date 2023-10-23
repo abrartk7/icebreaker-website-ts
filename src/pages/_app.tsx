@@ -1,9 +1,4 @@
-// i18n
-import '../locales/i18n';
-
-// scroll bar
 import 'simplebar/src/simplebar.css';
-
 // lazy image
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
@@ -19,17 +14,13 @@ import createEmotionCache from '../utils/createEmotionCache';
 // theme
 import ThemeProvider from '../theme';
 // locales
-import ThemeLocalization from '../locales';
 // components
 import ProgressBar from '../components/progress-bar';
-import SnackbarProvider from '../components/snackbar';
 import { MotionLazyContainer } from '../components/animate';
 import { ThemeSettings, SettingsProvider } from '../components/settings';
 
 // Check our docs
 // https://docs.minimals.cc/authentication/ts-version
-
-import { AuthProvider } from '../auth/JwtContext';
 
 // ----------------------------------------------------------------------
 
@@ -55,22 +46,16 @@ export default function MyApp(props: MyAppProps) {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
 
-      <AuthProvider>
-        <SettingsProvider>
-          <MotionLazyContainer>
-            <ThemeProvider>
-              <ThemeSettings>
-                <ThemeLocalization>
-                  <SnackbarProvider>
-                    <ProgressBar />
-                    {getLayout(<Component {...pageProps} />)}
-                  </SnackbarProvider>
-                </ThemeLocalization>
-              </ThemeSettings>
-            </ThemeProvider>
-          </MotionLazyContainer>
-        </SettingsProvider>
-      </AuthProvider>
+      <SettingsProvider>
+        <MotionLazyContainer>
+          <ThemeProvider>
+            <ThemeSettings>
+              <ProgressBar />
+              {getLayout(<Component {...pageProps} />)}
+            </ThemeSettings>
+          </ThemeProvider>
+        </MotionLazyContainer>
+      </SettingsProvider>
     </CacheProvider>
   );
 }
