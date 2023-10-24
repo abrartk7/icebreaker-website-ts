@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Grid, Typography, Box, Stack } from '@mui/material';
+import { Container, Grid, Typography, Box, Stack, Link, Card } from '@mui/material';
 import Iconify from '../iconify';
 
 // ----------------------------------------------------------------------
@@ -18,14 +18,15 @@ export default function AboutPage() {
       </Box>
       <Grid
         container
+        component={Card}
         sx={{
-          backgroundColor: 'black',
+          borderRadius: 0,
           clipPath: {
-            xl: 'polygon(0 0, calc(-49% - 31px) 0, 148% 95px, 106% 100%, 0 87%)',
-            lg: 'polygon(0 0, calc(1% - 19px) 0, 190% 81px, 100% 100%, 0 87%)',
-            md: 'polygon(0 0, calc(-1% - -8px) 0, 219% 91px, 111% 100%, 0 87%)',
+            xl: 'polygon(0 0, calc(-49% - 31px) 0, 148% 95px, 106% 100%, 0 85%)',
+            lg: 'polygon(0 0, calc(1% - 19px) 0, 190% 81px, 100% 99%, 0 84%)',
+            md: 'polygon(0 0, calc(-1% - -8px) 0, 219% 91px, 111% 101%, 0 85%)',
             sm: 'polygon(0 0, calc(2% - 31px) 0, 201% 82px, 100% 100%, 0 94%)',
-            xs: 'polygon(0 0, calc(2% - 31px) 0, 201% 82px, 100% 98%, 0 94%)',
+            xs: 'polygon(0 0, calc(2% - 31px) 0, 201% 82px, 100% 100%, 0 97%)',
           },
         }}
       >
@@ -58,7 +59,12 @@ export default function AboutPage() {
           md={8}
           sm={12}
           xs={12}
-          sx={{ my: { lg: 4, sm: 0 }, p: 4, pb: { xs: 10 } }}
+          sx={{
+            my: { lg: 4, sm: 0 },
+            p: 4,
+            pt: { xl: 6 },
+            pb: { xs: 10, lg: 3 },
+          }}
         >
           <Box
             sx={{
@@ -77,18 +83,24 @@ export default function AboutPage() {
               </Typography>
             </Box>
             <Stack flexDirection="row">
-              <Iconify
-                icon="devicon-plain:facebook"
-                sx={{ m: 1, cursor: 'pointer', color: 'primary.main' }}
-              />
-              <Iconify
-                icon="bi:instagram"
-                sx={{ m: 1, cursor: 'pointer', color: 'primary.main' }}
-              />
-              <Iconify
-                icon="iconoir:twitter"
-                sx={{ m: 1, cursor: 'pointer', color: 'primary.main' }}
-              />
+              <Link href="https://www.facebook.com/" target="_blank">
+                <Iconify
+                  icon="devicon-plain:facebook"
+                  sx={{ m: 1, cursor: 'pointer', color: 'primary.main' }}
+                />
+              </Link>
+              <Link href="https://www.instagram.com/" target="_blank">
+                <Iconify
+                  icon="bi:instagram"
+                  sx={{ m: 1, cursor: 'pointer', color: 'primary.main' }}
+                />
+              </Link>
+              <Link href="https://twitter.com/" target="_blank">
+                <Iconify
+                  icon="iconoir:twitter"
+                  sx={{ m: 1, cursor: 'pointer', color: 'primary.main' }}
+                />
+              </Link>
             </Stack>
           </Box>
           <Typography variant="body1" sx={{ color: 'text.secondary' }}>
@@ -104,8 +116,9 @@ export default function AboutPage() {
       </Grid>
       <Grid
         container
+        component={Card}
         sx={{
-          backgroundColor: 'black',
+          borderRadius: 0,
           clipPath: {
             xl: 'polygon(0 0, calc(1% - 80px) 0, 180% 95px, 117% 100%, 0 92%)',
             lg: 'polygon(0 0, calc(1% - 80px) 0, 180% 103px, 117% 101%, 0 84%)',
@@ -115,7 +128,19 @@ export default function AboutPage() {
           },
         }}
       >
-        <Grid item xl={8} lg={8} md={8} sm={12} xs={12} sx={{ my: 4, pt: 2, px: 4 }}>
+        <Grid
+          item
+          xl={8}
+          lg={8}
+          md={8}
+          sm={12}
+          xs={12}
+          sx={{
+            my: 4,
+            pt: 3,
+            px: 4,
+          }}
+        >
           <Box
             sx={{
               display: 'flex',
@@ -133,18 +158,24 @@ export default function AboutPage() {
               </Typography>
             </Box>
             <Stack flexDirection="row">
-              <Iconify
-                icon="devicon-plain:facebook"
-                sx={{ m: 1, cursor: 'pointer', color: 'primary.main' }}
-              />
-              <Iconify
-                icon="bi:instagram"
-                sx={{ m: 1, cursor: 'pointer', color: 'primary.main' }}
-              />
-              <Iconify
-                icon="iconoir:twitter"
-                sx={{ m: 1, cursor: 'pointer', color: 'primary.main' }}
-              />
+              <Link href="https://www.facebook.com/" target="_blank">
+                <Iconify
+                  icon="devicon-plain:facebook"
+                  sx={{ m: 1, cursor: 'pointer', color: 'primary.main' }}
+                />
+              </Link>
+              <Link href="https://www.instagram.com/" target="_blank">
+                <Iconify
+                  icon="bi:instagram"
+                  sx={{ m: 1, cursor: 'pointer', color: 'primary.main' }}
+                />
+              </Link>
+              <Link href="https://twitter.com/" target="_blank">
+                <Iconify
+                  icon="iconoir:twitter"
+                  sx={{ m: 1, cursor: 'pointer', color: 'primary.main' }}
+                />
+              </Link>
             </Stack>
           </Box>
 

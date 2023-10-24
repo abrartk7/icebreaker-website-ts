@@ -3,7 +3,6 @@ import React from 'react';
 import DashboardLayout from 'src/layouts/dashboard/DashboardLayout';
 import LandingPage from 'src/components/dashboard/LandingPage';
 import AboutPage from 'src/components/dashboard/AboutPage';
-import DownloadButton from 'src/components/dashboard/DownloadButton';
 
 // ----------------------------------------------------------------------
 
@@ -19,7 +18,6 @@ export default function Index() {
       </Head>
       <LandingPage />
       <AboutPage />
-      <DownloadButton />
     </>
   );
 }

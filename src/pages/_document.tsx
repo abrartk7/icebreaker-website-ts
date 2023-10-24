@@ -23,9 +23,9 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content={palette('light').primary.main} />
 
           {/* Favicon */}
-          <link rel="apple-touch-icon" sizes="180x180" href="/logo/newLogo.jpg" />
-          <link rel="icon" type="image/png" sizes="32x32" href="/logo/newLogo.jpg" />
-          <link rel="icon" type="image/png" sizes="16x16" href="/logo/newLogo.jpg" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/logo/newLogo.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/logo/newLogo.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/logo/newLogo.png" />
 
           {/* Emotion */}
           <meta name="emotion-insertion-point" content="" />

@@ -1,6 +1,6 @@
 // @mui
 import { useTheme } from '@mui/material/styles';
-import { AppBar, Toolbar, Box, Button } from '@mui/material';
+import { AppBar, Toolbar } from '@mui/material';
 // utils
 import { bgBlur } from '../../../utils/cssStyles';
 // hooks
@@ -31,19 +31,7 @@ export default function Header({ onOpenNav }: Props) {
 
   const isOffset = useOffSetTop(HEADER.H_DASHBOARD_DESKTOP) && !isNavHorizontal;
 
-  const renderContent = (
-    <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-      <Logo />
-      <Box display="flex">
-        <Button variant="text" sx={{ color: 'text.main', mr: 2 }}>
-          HOME
-        </Button>
-        <Button variant="text" sx={{ color: 'text.main', mr: 2 }}>
-          ABOUT
-        </Button>
-      </Box>
-    </Box>
-  );
+  const renderContent = <Logo />;
 
   return (
     <AppBar
@@ -79,6 +67,7 @@ export default function Header({ onOpenNav }: Props) {
         sx={{
           height: 1,
           px: { lg: 6 },
+          py: { md: 3, sm: 2 },
         }}
       >
         {renderContent}
