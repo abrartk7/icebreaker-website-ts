@@ -68,12 +68,14 @@ type SettingsProviderProps = {
 };
 
 export function SettingsProvider({ children }: SettingsProviderProps) {
-  const [themeMode, setThemeMode] = useState(defaultSettings.themeMode);
+  const [themeMode, setThemeMode] = useState('dark');
+  // const [themeMode, setThemeMode] = useState(defaultSettings.themeMode);
   const [themeLayout, setThemeLayout] = useState(defaultSettings.themeLayout);
   const [themeStretch, setThemeStretch] = useState(defaultSettings.themeStretch);
   const [themeContrast, setThemeContrast] = useState(defaultSettings.themeContrast);
   const [themeDirection, setThemeDirection] = useState(defaultSettings.themeDirection);
-  const [themeColorPresets, setThemeColorPresets] = useState(defaultSettings.themeColorPresets);
+  const [themeColorPresets, setThemeColorPresets] = useState('cyan');
+  // const [themeColorPresets, setThemeColorPresets] = useState(defaultSettings.themeColorPresets);
 
   const storageAvailable = localStorageAvailable();
 
@@ -90,19 +92,19 @@ export function SettingsProvider({ children }: SettingsProviderProps) {
 
   useEffect(() => {
     if (storageAvailable) {
-      const mode = getCookie('themeMode') || defaultSettings.themeMode;
+      // const mode = getCookie('themeMode') || defaultSettings.themeMode;
       const layout = getCookie('themeLayout') || defaultSettings.themeLayout;
       const stretch = getCookie('themeStretch') || defaultSettings.themeStretch;
       const contrast = getCookie('themeContrast') || defaultSettings.themeContrast;
       const direction = getCookie('themeDirection') || defaultSettings.themeDirection;
-      const colorPresets = getCookie('themeColorPresets') || defaultSettings.themeColorPresets;
+      // const colorPresets = getCookie('themeColorPresets') || defaultSettings.themeColorPresets;
 
-      setThemeMode(mode as ThemeModeValue);
+      // setThemeMode(mode as ThemeModeValue);
       setThemeLayout(layout as ThemeLayoutValue);
       setThemeStretch(stretch as ThemeStretchValue);
       setThemeContrast(contrast as ThemeContrastValue);
       setThemeDirection(direction as ThemeDirectionValue);
-      setThemeColorPresets(colorPresets as ThemeColorPresetsValue);
+      // setThemeColorPresets(colorPresets as ThemeColorPresetsValue);
     }
   }, [storageAvailable]);
 
@@ -110,7 +112,7 @@ export function SettingsProvider({ children }: SettingsProviderProps) {
   const onToggleMode = useCallback(() => {
     const value = themeMode === 'light' ? 'dark' : 'light';
     setThemeMode(value);
-    setCookie('themeMode', value);
+    // setCookie('themeMode', value);
   }, [themeMode]);
 
   const onChangeMode = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
@@ -168,7 +170,7 @@ export function SettingsProvider({ children }: SettingsProviderProps) {
   const onChangeColorPresets = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value as ThemeColorPresetsValue;
     setThemeColorPresets(value);
-    setCookie('themeColorPresets', value);
+    // setCookie('themeColorPresets', value);
   }, []);
 
   // Stretch
@@ -180,13 +182,13 @@ export function SettingsProvider({ children }: SettingsProviderProps) {
 
   // Reset
   const onResetSetting = useCallback(() => {
-    setThemeMode(defaultSettings.themeMode);
+    // setThemeMode(defaultSettings.themeMode);
     setThemeLayout(defaultSettings.themeLayout);
     setThemeStretch(defaultSettings.themeStretch);
     setThemeContrast(defaultSettings.themeContrast);
     setThemeDirection(defaultSettings.themeDirection);
     setThemeColorPresets(defaultSettings.themeColorPresets);
-    removeCookie('themeMode');
+    // removeCookie('themeMode');
     removeCookie('themeLayout');
     removeCookie('themeStretch');
     removeCookie('themeContrast');
@@ -220,7 +222,8 @@ export function SettingsProvider({ children }: SettingsProviderProps) {
       themeColorPresets,
       onChangeColorPresets,
       presetsOption,
-      presetsColor: getPresets(themeColorPresets),
+      // presetsColor: getPresets(themeColorPresets),
+      presetsColor: getPresets('cyan'),
       // Reset
       onResetSetting,
     }),
@@ -252,7 +255,7 @@ export function SettingsProvider({ children }: SettingsProviderProps) {
       onResetSetting,
     ]
   );
-
+  // @ts-ignore
   return <SettingsContext.Provider value={memoizedValue}>{children}</SettingsContext.Provider>;
 }
 
