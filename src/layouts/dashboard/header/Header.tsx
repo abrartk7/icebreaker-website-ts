@@ -1,6 +1,6 @@
 // @mui
 import { useTheme } from '@mui/material/styles';
-import { Stack, AppBar, Toolbar, IconButton, Typography, Box, Button } from '@mui/material';
+import { AppBar, Toolbar, Box, Button } from '@mui/material';
 // utils
 import { bgBlur } from '../../../utils/cssStyles';
 // hooks
@@ -10,14 +10,7 @@ import useResponsive from '../../../hooks/useResponsive';
 import { HEADER, NAV } from '../../../config-global';
 // components
 import Logo from '../../../components/logo';
-import Iconify from '../../../components/iconify';
 import { useSettingsContext } from '../../../components/settings';
-//
-import Searchbar from './Searchbar';
-import AccountPopover from './AccountPopover';
-import LanguagePopover from './LanguagePopover';
-import ContactsPopover from './ContactsPopover';
-import NotificationsPopover from './NotificationsPopover';
 
 // ----------------------------------------------------------------------
 
@@ -40,38 +33,15 @@ export default function Header({ onOpenNav }: Props) {
 
   const renderContent = (
     <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-      {/* {isDesktop && isNavHorizontal && <Logo sx={{ mr: 2.5 }} />} */}
-
-      {/* {!isDesktop && (
-        <IconButton onClick={onOpenNav} sx={{ mr: 1, color: 'text.primary' }}>
-          <Iconify icon="eva:menu-2-fill" />
-        </IconButton>
-      )} */}
-      <Logo sx={{ mr: 2.5 }} />
-      <Box sx={{ display: 'flex' }}>
-        <Button variant="text" sx={{ color: 'text.primary', mr: 2 }}>
+      <Logo />
+      <Box display="flex">
+        <Button variant="text" sx={{ color: 'text.main', mr: 2 }}>
           HOME
         </Button>
-        <Button variant="text" sx={{ color: 'text.primary', mr: 2 }}>
+        <Button variant="text" sx={{ color: 'text.main', mr: 2 }}>
           ABOUT
         </Button>
       </Box>
-      <AccountPopover />
-
-      {/* <Stack
-        flexGrow={1}
-        direction="row"
-        alignItems="center"
-        justifyContent="flex-end"
-        spacing={{ xs: 0.5, sm: 1.5 }}
-      >
-        <LanguagePopover />
-
-        <NotificationsPopover />
-
-        <ContactsPopover />
-
-      </Stack> */}
     </Box>
   );
 
@@ -88,7 +58,7 @@ export default function Header({ onOpenNav }: Props) {
           duration: theme.transitions.duration.shorter,
         }),
         ...(isDesktop && {
-          width: `calc(100% - ${NAV.W_DASHBOARD + 1}px)`,
+          width: '100%',
           height: HEADER.H_DASHBOARD_DESKTOP,
           ...(isOffset && {
             height: HEADER.H_DASHBOARD_DESKTOP_OFFSET,
@@ -108,7 +78,7 @@ export default function Header({ onOpenNav }: Props) {
       <Toolbar
         sx={{
           height: 1,
-          px: { lg: 5 },
+          px: { lg: 6 },
         }}
       >
         {renderContent}

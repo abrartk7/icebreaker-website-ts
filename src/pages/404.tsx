@@ -9,7 +9,7 @@ import CompactLayout from '../layouts/compact';
 // components
 import { MotionContainer, varBounce } from '../components/animate';
 // assets
-import { PageNotFoundIllustration } from '../assets/illustrations';
+import PageNotFoundIllustration from '../assets/illustrations/PageNotFoundIllustration';
 
 // ----------------------------------------------------------------------
 
@@ -21,7 +21,7 @@ export default function Page404() {
   return (
     <>
       <Head>
-        <title> 404 Page Not Found | Minimal UI</title>
+        <title> 404 Page Not Found | Ice Breaker</title>
       </Head>
 
       <MotionContainer>
