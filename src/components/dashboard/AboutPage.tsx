@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Grid, Typography, Box, Stack, Link, Card } from '@mui/material';
 import Iconify from '../iconify';
-
 // ----------------------------------------------------------------------
 
 export default function AboutPage() {
@@ -22,11 +21,11 @@ export default function AboutPage() {
         sx={{
           borderRadius: 0,
           clipPath: {
-            xl: 'polygon(0 0, calc(-49% - 31px) 0, 148% 95px, 106% 100%, 0 85%)',
-            lg: 'polygon(0 0, calc(1% - 19px) 0, 190% 81px, 100% 99%, 0 84%)',
-            md: 'polygon(0 0, calc(-1% - -8px) 0, 219% 91px, 111% 101%, 0 85%)',
-            sm: 'polygon(0 0, calc(2% - 31px) 0, 201% 82px, 100% 100%, 0 94%)',
-            xs: 'polygon(0 0, calc(2% - 31px) 0, 201% 82px, 100% 100%, 0 97%)',
+            xl: 'polygon(0 0, calc(-49% - 31px) 0, 148% 95px, 106% 96%, 0 87%)',
+            lg: 'polygon(0 0, calc(1% - 19px) 0, 190% 81px, 100% 96%, 0 86%)',
+            md: 'polygon(0 0, calc(-1% - -8px) 0, 219% 91px, 111% 94%, 0 83%)',
+            sm: 'polygon(0 0, calc(2% - 31px) 0, 201% 82px, 100% 98%, 0 93%)',
+            xs: 'polygon(0 0, calc(2% - 31px) 0, 201% 82px, 100% 98.5%, 0 96%)',
           },
         }}
       >
@@ -39,18 +38,20 @@ export default function AboutPage() {
           xs={12}
           sx={{
             my: { lg: 4, sm: 0 },
-            px: { lg: 4, sm: 4, xs: 2 },
-            pt: { xl: 6, lg: 3, md: 4, sm: 7, xs: 5 },
-
+            px: { lg: 4, md: '11px', sm: 4, xs: 2 },
+            pt: { xl: 6, lg: 0, md: 0, sm: 7, xs: 5 },
             display: 'flex',
             justifyContent: { sm: 'center', xs: 'center' },
           }}
         >
-          <img
-            style={{ maxWidth: '100%', height: '300px' }}
-            alt="profile-1"
-            src="../assets\images\person5.png"
-          />
+          <Box
+            sx={{
+              width: { xs: '80%', sm: '50%', md: '100%' },
+              pt: { md: 5, lg: 0 },
+            }}
+          >
+            <img alt="profile-1" src="../assets\images\person5.png" />
+          </Box>
         </Grid>
         <Grid
           item
@@ -63,7 +64,7 @@ export default function AboutPage() {
             my: { lg: 4, sm: 0 },
             p: 4,
             pt: { xl: 6 },
-            pb: { xs: 10, lg: 3 },
+            pb: { xs: 10, lg: 5 },
           }}
         >
           <Box
@@ -76,7 +77,7 @@ export default function AboutPage() {
           >
             <Box>
               <Typography variant="h3" sx={{ color: 'primary.main' }}>
-                Alice john
+                David Sackler
               </Typography>
               <Typography variant="subtitle1" gutterBottom sx={{ color: 'text.secondary' }}>
                 CEO, CO-FOUNDER
@@ -104,13 +105,21 @@ export default function AboutPage() {
             </Stack>
           </Box>
           <Typography variant="body1" sx={{ color: 'text.secondary' }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis perspiciatis corporis
-            necessitatibus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-            perspiciatis corporis necessitatibus? Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Debitis perspiciatis corporis necessitatibus? Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Debitis perspiciatis corporis necessitatibus? Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Debitis perspiciatis corporis
-            necessitatibus?
+            David, a recent Computer Science graduate from Los Angeles, California, finds joy in the
+            fast-paced world of racing his car on the track, reading books, meeting new people, and
+            skiing. Along with that, beyond his professional pursuits, he has a passion for coding,
+            dedicating his free time to it.
+            <br /> With a solid foundation in software engineering, David spent two years at
+            Genentech, specializing in automation and data science. His proficiency in handling
+            complex projects efficiently earned him numerous awards.
+            <br /> While immersed in the tech world, David recognized a gap in the social landscape.
+            Despite the camaraderie during his academic years, post-graduation life posed challenges
+            in making new connections. Struggling to approach strangers and forge friendships in his
+            current environment, he identified a need for a solution. This realization led him to
+            develop an app that facilitates in-person connections, driven by his desire to enrich
+            lives through meaningful friendships. In an increasingly virtual world, David aims to
+            counteract the trend, offering a platform that fosters genuine and nourishing social
+            interactions.
           </Typography>
         </Grid>
       </Grid>
